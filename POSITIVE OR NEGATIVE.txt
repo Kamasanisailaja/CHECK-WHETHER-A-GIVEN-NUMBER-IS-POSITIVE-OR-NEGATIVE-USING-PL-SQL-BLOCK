@@ -1,0 +1,27 @@
+QUERY :
+---------------------------------------------------------------
+		POSITIVE OR NEGATIVE
+----------------------------------------------------------------
+PL/SQL BLOCK :
+
+declare
+	 a int;
+begin
+	a:=&a;
+	if a=0 then
+		dbms_output.put_line(a|| ' is zero');
+      else if a>0 then
+		dbms_output.put_line(a|| ' is positive');
+      else
+		dbms_output.put_line(a|| ' is negative');
+	end if;
+	end if;
+end;
+/
+OUTPUT :
+----------------------------------------------------------------
+Enter value for a: -2
+old   4:        a:=&a;
+new   4:        a:=-2;
+-2 is negative
+-----------------------------------------------------------------
